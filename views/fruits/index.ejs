@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fruits Index</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
 <body>
-    <a href="/fruits/new">Add New Fruit</a>
+    <div class="index-header-div">
+        <a href="/fruits/new" class="add-fruit">Add New Fruit</a>
+    </div>
     <h1>All Fruits</h1>
     <ul>
         <% for(fruit of fruits) { %>
             <li>
-                <a href="/fruits/<%= fruit._id %>"><%= fruit.name %></a>
+                <a href="/fruits/<%= fruit._id %>" class="fruits-index-link"><%= fruit.name %></a>
             </li>
         <% } %>
     </ul>
